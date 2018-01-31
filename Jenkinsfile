@@ -1,8 +1,8 @@
 #! groovy
 node {
-  
+
   stage('checkout') {
-    git url: 'https://github.com/venkatalolla/Jenkins_Docker.git'
+    git url: 'https://github.com/venkatalolla/Jenkins_Docker_Gradle.git'
   }
 
   stage('Build'){
