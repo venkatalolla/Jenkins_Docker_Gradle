@@ -9,7 +9,12 @@ node {
     //def mvnHome = tool 'M3'
     //tool name: 'M3', type: 'maven'
     tool name: 'gradle', type: 'gradle'
-    sh "gradle clean install"
+    gradle('check')
+        gradle {
+            tasks('clean')
+            tasks('check')
+        }
+    //sh "gradle clean install"
   }
 
   stage('DockerBuild'){
